@@ -6,7 +6,7 @@ class Song
     @name = name
   end
 
-  def new_by_filename(filename)
+  def self.new_by_filename(filename)
     a = filename.split(/-|[.]/)
     s = Song.new("#{a[1].strip}")
     s.artist = a[0].strip
