@@ -8,5 +8,6 @@ class MP3Importer
 
   def files
     x = Dir["#{@path}/*"]
+    x.each  {|y| y.slice!(/.*\//)}
   end
 end
