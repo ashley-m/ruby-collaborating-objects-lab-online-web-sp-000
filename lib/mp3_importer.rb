@@ -13,9 +13,7 @@ class MP3Importer
 
   def import
     files.each { |y|
-      a = y.split(/-|[.]/)
-      s = Song.new(a[1].strip)
-      s.artist = a[0].strip
+      s = Song.new_by_filename(y)
     }
   end
 end
