@@ -11,6 +11,7 @@ class Song
     a = filename.split(/-|[.]/)
     s = Song.new("#{a[1].strip}")
     s.artist = Artist.new(a[0].strip)
+    s.artist.songs << s
     return s
   end
 end
